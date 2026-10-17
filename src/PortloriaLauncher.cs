@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
@@ -96,21 +97,55 @@ namespace PortloriaBeta {
    if(File.Exists(r.Url)){File.Copy(r.Url,file,true);progress(100,"Testarchiv kopiert");return;}
 #endif
    ServicePointManager.SecurityProtocol=SecurityProtocolType.Tls12;
-   var request=(HttpWebRequest)WebRequest.Create(r.Url);
-   request.UserAgent="PortloriaBetaLauncher/0.1";
-   request.Timeout=30000;
-   request.ReadWriteTimeout=90000;
-   using(var response=(HttpWebResponse)request.GetResponse())
-   using(var stream=response.GetResponseStream())
-   using(var dest=new FileStream(file,FileMode.Create,FileAccess.Write,FileShare.None,1024*1024)){
-    byte[] buffer=new byte[1024*1024];long total=0;int read;int last=-1;
-    while((read=stream.Read(buffer,0,buffer.Length))>0){
-     dest.Write(buffer,0,read);total+=read;
-     if(total>r.Size)throw new InvalidDataException("Datei groesser als angegeben.");
-     int pct=(int)(total*100L/r.Size);
-     if(pct!=last){last=pct;progress(Math.Min(100,pct),"Herunterladen: "+SizeText(total)+" / "+SizeText(r.Size));}
+   if(File.Exists(file)&&new FileInfo(file).Length>r.Size)File.Delete(file);
+   Exception lastError=null;
+   for(int attempt=1;attempt<=8;attempt++){
+    long have=File.Exists(file)?new FileInfo(file).Length:0;
+    if(have==r.Size){progress(100,"Bereits heruntergeladen – pruefe Pruefsumme ...");return;}
+    try{
+     var request=(HttpWebRequest)WebRequest.Create(r.Url);
+     request.UserAgent="PortloriaBetaLauncher/0.2";
+     request.Timeout=60000;
+     request.ReadWriteTimeout=120000;
+     request.KeepAlive=false;
+     if(have>0)request.AddRange(have);
+     using(var response=(HttpWebResponse)request.GetResponse()){
+      if(have>0 && response.StatusCode!=HttpStatusCode.PartialContent){
+       if(File.Exists(file))File.Delete(file);
+       throw new IOException("Server hat den Teil-Download nicht akzeptiert. Starte erneut.");
+      }
+      if(have>0){
+       string range=response.Headers[HttpResponseHeader.ContentRange]??"";
+       if(!range.StartsWith("bytes "+have+"-",StringComparison.OrdinalIgnoreCase))
+        throw new InvalidDataException("Downloadserver meldet falschen Dateiabschnitt.");
+      }
+      using(var input=response.GetResponseStream())
+      using(var dest=new FileStream(file,FileMode.OpenOrCreate,FileAccess.Write,FileShare.None,1024*1024)){
+       dest.Seek(have,SeekOrigin.Begin);
+       byte[] buffer=new byte[1024*1024];
+       int count,last=-1;long total=have;
+       while((count=input.Read(buffer,0,buffer.Length))>0){
+        dest.Write(buffer,0,count);total+=count;
+        if(total>r.Size)throw new InvalidDataException("Download groesser als die freigegebene Datei.");
+        int pct=(int)(total*100L/r.Size);
+        if(pct!=last){last=pct;progress(Math.Min(100,pct),"Herunterladen: "+SizeText(total)+" / "+SizeText(r.Size));}
+       }
+      }
+     }
+     if(new FileInfo(file).Length==r.Size){
+      progress(100,"Download abgeschlossen.");
+      return;
+     }
+     lastError=new IOException("Verbindung wurde vorzeitig beendet.");
+    }catch(WebException ex){lastError=ex;}
+     catch(IOException ex){lastError=ex;}
+    if(attempt<8){
+     progress((int)((File.Exists(file)?new FileInfo(file).Length:0)*100L/r.Size),
+      "Verbindung unterbrochen. Setze Download fort (Versuch "+(attempt+1)+"/8) ...");
+     Thread.Sleep(Math.Min(12000,2000*attempt));
     }
    }
+   throw new IOException("Download konnte nicht abgeschlossen werden. Bereits geladene Daten bleiben erhalten.",lastError);
   }
   internal static void Verify(Release r,string file){
    if(new FileInfo(file).Length!=r.Size)throw new InvalidDataException("Falsche Archivgroesse.");
@@ -189,7 +224,7 @@ namespace PortloriaBeta {
   private Label title,sub,status,version,note;
   private Button play;
   private ProgressBar progress;
-  private bool busy;
+  private volatile bool busy;
   internal Launcher(){
    Text="Portloria & Co. – Testlauncher";
    ClientSize=new Size(690,367);
@@ -213,7 +248,7 @@ namespace PortloriaBeta {
   }
   private void UI(Action a){if(!IsDisposed&&IsHandleCreated)BeginInvoke(a);}
   private void UpdateProgress(string message,int pct){
-   UI(delegate{status.Text=message;progress.Value=Math.Max(0,Math.Min(100,pct));});
+   UI(delegate{if(busy){status.Text=message;progress.Value=Math.Max(0,Math.Min(100,pct));}});
   }
   private void StartCheck(){
    if(busy)return;busy=true;play.Enabled=false;
@@ -241,15 +276,18 @@ namespace PortloriaBeta {
       if(Process.GetProcessesByName("RetailGame").Length>0)
        throw new InvalidOperationException("Bitte laufendes Portloria zuerst beenden.");
       Directory.CreateDirectory(Path.GetDirectoryName(Engine.Game));
-      string archive=Engine.Game+".download.partial";
-      try{
-       UpdateProgress("Spielversion "+latest.Version+" wird geladen ...",3);
-       Engine.Download(latest,archive,delegate(int p,string m){UpdateProgress(m,3+(int)(p*.73));});
-       UpdateProgress("Pruefe SHA-256 ...",77);
-       Engine.Verify(latest,archive);
-       UpdateProgress("Installiere Portloria ...",80);
-       Engine.Install(latest,archive,delegate(int p,string m){UpdateProgress(m,80+(int)(p*.2));});
-      }finally{try{if(File.Exists(archive))File.Delete(archive);}catch{}}
+      string archive=Engine.Game+".v"+latest.Version+".download.partial";
+      UpdateProgress("Spielversion "+latest.Version+" wird geladen ...",3);
+      Engine.Download(latest,archive,delegate(int p,string m){UpdateProgress(m,3+(int)(p*.73));});
+      UpdateProgress("Pruefe SHA-256 ...",77);
+      try{Engine.Verify(latest,archive);}
+      catch(InvalidDataException){
+       try{if(File.Exists(archive))File.Delete(archive);}catch{}
+       throw;
+      }
+      UpdateProgress("Installiere Portloria ...",80);
+      Engine.Install(latest,archive,delegate(int p,string m){UpdateProgress(m,80+(int)(p*.2));});
+      try{if(File.Exists(archive))File.Delete(archive);}catch{}
      }
      UI(delegate{
       busy=false;version.Text="Installiert: "+Engine.LocalVersion()+" · Testkanal";
@@ -257,6 +295,11 @@ namespace PortloriaBeta {
       progress.Value=100;play.Text="SPIELEN";play.Enabled=Engine.IsGameInstalled();
      });
     }catch(Exception ex){
+     try{
+      Directory.CreateDirectory(Engine.Home);
+      File.AppendAllText(Path.Combine(Engine.Home,"launcher-errors.log"),
+       DateTime.UtcNow.ToString("o")+" "+ex.GetType().Name+": "+ex.Message+Environment.NewLine);
+     }catch{}
      UI(delegate{
       busy=false;status.Text="Update nicht moeglich: "+ex.Message;
       play.Text=Engine.IsGameInstalled()?"OFFLINE SPIELEN":"ERNEUT VERSUCHEN";
