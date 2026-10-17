@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10101d">
+<meta name="description" content="Portloria & Co. Alpha herunterladen. Installiere den Windows-Testlauncher und erhalte zukünftige Spielupdates automatisch.">
+<title>Portloria & Co. — Alpha herunterladen</title>
+<style>
+:root{color-scheme:dark;--bg:#10101d;--panel:#1c1b32;--stroke:#40385a;--text:#f2efff;--muted:#b6b0ce;--primary:#a780ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(ellipse 80% 50% at 80% -15%,#593d8d55,transparent),linear-gradient(160deg,#17192c 0%,#100f1e 65%,#151021 100%)}
+a{color:#c3a9ff}a:hover{color:#e3d6ff}button,a{outline-offset:4px}
+.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+header{border-bottom:1px solid #ffffff18;padding:21px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.brand{font-size:15px;font-weight:850;letter-spacing:.18em;color:#fff;text-decoration:none}
+.small{font-size:13px;color:var(--muted)}
+.hero{padding:92px 0 70px;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em;color:#cfb9ff}
+h1{font-size:clamp(43px,6.5vw,76px);line-height:1.06;letter-spacing:-.055em;margin:21px 0 18px}
+h1 span{color:#c8a9ff}h2{font-size:25px;margin:0 0 17px;letter-spacing:-.025em}h3{font-size:17px;margin:0 0 8px}
+.lead{font-size:18px;color:#d4cfe3;max-width:600px;line-height:1.7}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 15px}
+.cta,.secondary{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:14px 22px;font-size:15px;font-weight:800;text-decoration:none;min-height:52px}
+.cta{color:#180f29;background:#c5aaff;box-shadow:0 10px 35px #9866fc32}
+.cta:hover{color:#150f20;background:#e0d1ff}
+.secondary{color:#e8e0ff;border:1px solid #66557f;background:#ffffff09}
+.hero-art{height:370px;position:relative;border:1px solid #58477466;border-radius:22px;overflow:hidden;background:radial-gradient(ellipse at 55% 42%,#8e66c14d,transparent 44%),linear-gradient(168deg,#28213e,#11192f 65%,#1c152a)}
+.hero-art:before{content:"";position:absolute;left:-4%;right:-4%;bottom:0;height:52%;background:linear-gradient(#25233f,transparent),repeating-linear-gradient(90deg,transparent 0 30px,#403855 31px 44px,#161323 45px 75px);clip-path:polygon(0 33%,7% 12%,10% 12%,10% 50%,17% 50%,17% 4%,24% 4%,24% 56%,29% 56%,29% 27%,34% 27%,34% 70%,40% 70%,40% 15%,45% 15%,45% 46%,53% 46%,53% 2%,60% 2%,60% 64%,66% 64%,66% 35%,74% 35%,74% 57%,80% 57%,80% 9%,88% 9%,88% 51%,94% 51%,94% 23%,100% 23%,100% 100%,0 100%)}
+.hero-art:after{content:"P & CO.";position:absolute;bottom:26px;right:30px;letter-spacing:.24em;color:#e8dcff70;font-size:14px;font-weight:800}
+.glow{position:absolute;top:50px;left:40px;border:1px solid #c9a6ff88;border-radius:999px;padding:8px 17px;color:#e8dfff;font-size:12px}
+section{padding:30px 0 70px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{border:1px solid var(--stroke);background:linear-gradient(155deg,#242039,#19172a);border-radius:18px;padding:25px}
+.number{font-weight:800;color:#bc9cff;margin-bottom:11px;font-size:14px}
+.card p,.faq p{margin:0;color:var(--muted)}
+.notice{margin-top:24px;border:1px solid #58506d;background:#1b192d;border-radius:15px;padding:16px 20px;color:#cfc8e3;font-size:14px}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{border-top:1px solid #4d4568;padding-top:20px}
+.meta{font-size:13px;color:var(--muted)}.meta strong{color:#dfd4ff}
+footer{border-top:1px solid #ffffff20;padding:28px 0 42px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:52px 0}.hero-art{height:220px}.cards,.faq{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="./">PORTLORIA & CO.</a><a class="small" href="#fragen">Fragen & Hinweise</a></div></header>
+<main class="wrap">
+<div class="hero">
+<div>
+<div class="eyebrow">WINDOWS ALPHA · EARLY ACCESS</div>
+<h1>BUILD YOUR BUSINESS.<br><span>TOGETHER.</span></h1>
+<p class="lead">Erkunde Portloria & Co. schon während der Entwicklung. Installiere das Spiel einmal mit dem Testlauncher und erhalte kommende Versionen beim Start automatisch.</p>
+<div class="actions">
+<a class="cta" href="https://github.com/ju53648/portloria-builds/releases/download/v0.1.0-alpha/PortloriaLauncher.exe" download>Testlauncher herunterladen ↓</a>
+<a class="secondary" href="#anleitung">So funktioniert’s</a>
+</div>
+<p class="meta">Für Windows 10/11 · <span id="release-version">Alpha 0.1.0</span> · Kostenloser Test</p>
+</div>
+<div class="hero-art" role="img" aria-label="Abstrakte Silhouette einer nächtlichen Hafenstadt"><div class="glow">DIE STADT GEHÖRT EUCH</div></div>
+</div>
+<section id="anleitung">
+<h2>In drei Schritten ins Spiel</h2>
+<div class="cards">
+<div class="card"><div class="number">01 · HERUNTERLADEN</div><h3>Launcher speichern</h3><p>Lade die kleine Windows-Datei herunter und bewahre sie auf. Sie ist dein fester Einstieg ins Spiel.</p></div>
+<div class="card"><div class="number">02 · INSTALLIEREN</div><h3>Spiel herunterladen</h3><p>Der Launcher lädt automatisch die aktuelle Spielversion, prüft die SHA-256-Prüfsumme und installiert sie.</p></div>
+<div class="card"><div class="number">03 · AKTUALISIEREN</div><h3>Updates automatisch</h3><p>Starte künftig denselben Launcher. Neue Versionen werden erkannt und installiert, bevor du spielst.</p></div>
+</div>
+<div class="notice"><strong>Alpha-Hinweis:</strong> Das Spiel ist noch in Entwicklung. Funktionen können unvollständig sein oder Fehler enthalten. Für den Online-Modus ist ein eigenes Epic-Konto nötig. Während der Epic-Testphase können zusätzliche Freigaben erforderlich sein. Der Launcher ist derzeit noch nicht digital signiert; Windows kann deshalb eine Warnung anzeigen. Lade ihn ausschließlich von dieser GitHub-Releaseseite herunter.</div>
+</section>
+<section id="fragen">
+<h2>Fragen und Downloads</h2>
+<div class="faq">
+<div class="panel"><h3>Muss ich später alles neu herunterladen?</h3><p>Nein, du verwendest weiterhin denselben Launcher. Für neue Builds wird aktuell noch das vollständige Spielpaket heruntergeladen; kleine Delta-Patches sind für eine spätere Version geplant.</p></div>
+<div class="panel"><h3>Bleiben meine Spielstände erhalten?</h3><p>Der Updater bewahrt lokale Save-Ordner im Installationsverzeichnis auf. Zusätzlich empfehlen wir in dieser frühen Alpha eigene Sicherungen wichtiger Spielstände.</p></div>
+<div class="panel"><h3>Wie groß ist Portloria?</h3><p>Der erste Spiel-Download beträgt ungefähr 1,8 GB. Für Installation und spätere Aktualisierungen solltest du mehrere GB freien Speicher haben.</p></div>
+<div class="panel"><h3>Direkter Download / Prüfsumme</h3><p><a href="https://github.com/ju53648/portloria-builds/releases/tag/v0.1.0-alpha">Alle Dateien dieses Test-Releases</a>. <span id="checksum-text">Der Launcher überprüft das Spielpaket automatisch.</span></p></div>
+</div>
+</section>
+</main>
+<footer><div class="wrap"><span>© Lumorix · Portloria & Co. · Alpha-Testkanal</span><span><a href="https://lumorix.eu/impressum.html">Impressum</a> · <a href="https://lumorix.eu/datenschutz.html">Datenschutz</a> · <a href="https://github.com/ju53648/portloria-builds">Release-Archiv</a></span></div></footer>
+<script>
+fetch('./latest.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(x=>{
+const v=document.getElementById('release-version');v.textContent='Alpha '+x.version;
+const c=document.getElementById('checksum-text');c.textContent='SHA-256 (Spielarchiv): '+x.sha256;
+}).catch(()=>{});
+</script>
+</body>
+</html>
