@@ -30,9 +30,9 @@
       "weight": 2
     }
   ],
-  "coverImage": "https://ju53648.github.io/portloria-builds/assets/portloria-cover.svg",
-  "bannerImage": "https://ju53648.github.io/portloria-builds/assets/portloria-banner.svg",
-  "iconImage": "https://ju53648.github.io/portloria-builds/assets/portloria-icon.svg",
+  "coverImage": "/assets/games/portloria-cover.svg",
+  "bannerImage": "/assets/games/portloria-banner.svg",
+  "iconImage": "/assets/games/portloria-icon.svg",
   "executable": "Windows/RetailGame.exe",
   "requiredPaths": [
     "Windows/RetailGame/Binaries/Win64/RetailGame.exe",
