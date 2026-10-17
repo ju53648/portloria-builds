@@ -1,0 +1,77 @@
+{
+  "id": "com.lumorix.portloria",
+  "itemType": "game",
+  "platform": "desktop",
+  "name": "PORTLORIA & CO.",
+  "version": "0.1.0",
+  "description": "Multiplayer-Unternehmenssimulation in einer Hafenstadt. Frühe Alpha-Version mit Epic Online Services.",
+  "developer": "Lumorix",
+  "releaseDate": "2026-10-17",
+  "categories": [
+    "Simulation",
+    "Multiplayer",
+    "Alpha"
+  ],
+  "tags": [
+    {
+      "id": "simulation",
+      "weight": 3
+    },
+    {
+      "id": "multiplayer",
+      "weight": 3
+    },
+    {
+      "id": "alpha",
+      "weight": 2
+    },
+    {
+      "id": "desktop",
+      "weight": 2
+    }
+  ],
+  "coverImage": "/assets/games/portloria-cover.svg",
+  "bannerImage": "/assets/games/portloria-banner.svg",
+  "iconImage": "/assets/games/portloria-icon.svg",
+  "executable": "Windows/RetailGame.exe",
+  "requiredPaths": [
+    "Windows/RetailGame/Binaries/Win64/RetailGame.exe",
+    "Windows/RetailGame/Content/Paks/RetailGame-Windows.ucas",
+    "Windows/RetailGame/Content/Paks/RetailGame-Windows.utoc"
+  ],
+  "installSizeBytes": 5000000000,
+  "defaultInstallFolder": "Portloria & Co.",
+  "distribution": {
+    "channel": "githubRelease",
+    "packageType": "zip"
+  },
+  "supportedActions": [
+    "install",
+    "launch",
+    "update",
+    "repair",
+    "uninstall",
+    "openFolder",
+    "moveInstall"
+  ],
+  "installStrategy": {
+    "kind": "zipArchive",
+    "rootFolder": "."
+  },
+  "download": {
+    "kind": "httpArchive",
+    "url": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.0-alpha/portloria-win64-v0.1.0.zip",
+    "sha256": "3e4f1e19450b7f222fb4229f03c0ebe7663c4f47d532d16eac9595fa3c98d2a2",
+    "sizeBytes": 1880047236
+  },
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "date": "2026-10-17",
+      "items": [
+        "Erste Windows-Alpha mit EOS-Anmeldung, Lobby und Multiplayer-Spielwelt.",
+        "Noch nicht vollständig über zwei Internetanschlüsse abgenommen."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "version": "1",
+  "manifests": [
+    {
+      "url": "https://raw.githubusercontent.com/ju53648/portloria-builds/main/manifest.json"
+    }
+  ]
+}
