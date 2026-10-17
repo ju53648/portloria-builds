@@ -26,7 +26,26 @@ namespace PortloriaBeta {
 #endif
    return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"PortloriaAndCo");
   }}
-  internal static string Game {get{return Path.Combine(Home,"Game");}}
+  internal static string InstallLocationFile {get{return Path.Combine(Home,"game-directory.txt");}}
+  internal static string Game {get{
+   try{
+    string location=File.ReadAllText(InstallLocationFile,Encoding.UTF8).Trim();
+    if(Path.IsPathRooted(location)&&location.Length>3)return Path.GetFullPath(location);
+   }catch{}
+   return Path.Combine(Home,"Game");
+  }}
+  internal static void ChooseInstallFolder(string parent){
+   if(string.IsNullOrEmpty(parent)||!Path.IsPathRooted(parent))throw new InvalidDataException("Installationspfad ist ungueltig.");
+   string folder=Path.GetFullPath(Path.Combine(parent,"Portloria & Co."));
+   Directory.CreateDirectory(Home);
+   File.WriteAllText(InstallLocationFile,folder,Encoding.UTF8);
+  }
+  internal static void RequireSpace(long downloadBytes){
+   string root=Path.GetPathRoot(Game);
+   var drive=new DriveInfo(root);
+   if(!drive.IsReady || drive.AvailableFreeSpace<downloadBytes*3)
+    throw new IOException("Auf "+root+" werden mindestens "+SizeText(downloadBytes*3)+" freier Platz fuer Download und Entpacken benoetigt. Bitte einen anderen Installationsordner waehlen.");
+  }
   internal static string Exe {get{return Path.Combine(Game,"Windows","RetailGame.exe");}}
   internal static string State {get{return Path.Combine(Home,"installed-version.txt");}}
   internal static bool IsGameInstalled(){return File.Exists(Exe);}
@@ -141,8 +160,8 @@ namespace PortloriaBeta {
   }
   internal static void Install(Release r,string zip,Action<int,string> progress){
    Directory.CreateDirectory(Home);
-   string staged=Path.Combine(Home,"Game.updating");
-   string backup=Path.Combine(Home,"Game.previous");
+   string staged=Game+".updating";
+   string backup=Game+".previous";
    if(!Directory.Exists(Game)&&Directory.Exists(backup))Directory.Move(backup,Game);
    if(Directory.Exists(staged))Directory.Delete(staged,true);
    Extract(zip,staged,progress);
@@ -204,10 +223,25 @@ namespace PortloriaBeta {
      Release latest=Engine.Latest();
      bool required=!Engine.IsGameInstalled()||Engine.Newer(latest.Version,Engine.LocalVersion());
      if(required){
+      if(!Engine.IsGameInstalled()&&!File.Exists(Engine.InstallLocationFile)){
+       bool selected=false;
+       Invoke(new Action(delegate{
+        using(var dlg=new FolderBrowserDialog()){
+         dlg.Description="Waehle das Laufwerk und den Ordner fuer Portloria & Co. (ca. 6 GB frei benoetigt).";
+         dlg.ShowNewFolderButton=true;
+         dlg.SelectedPath=Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+         if(dlg.ShowDialog(this)==DialogResult.OK){
+          Engine.ChooseInstallFolder(dlg.SelectedPath);selected=true;
+         }
+        }
+       }));
+       if(!selected)throw new OperationCanceledException("Installation abgebrochen.");
+      }
+      Engine.RequireSpace(latest.Size);
       if(Process.GetProcessesByName("RetailGame").Length>0)
        throw new InvalidOperationException("Bitte laufendes Portloria zuerst beenden.");
-      Directory.CreateDirectory(Engine.Home);
-      string archive=Path.Combine(Engine.Home,"portloria-download.partial");
+      Directory.CreateDirectory(Path.GetDirectoryName(Engine.Game));
+      string archive=Engine.Game+".download.partial";
       try{
        UpdateProgress("Spielversion "+latest.Version+" wird geladen ...",3);
        Engine.Download(latest,archive,delegate(int p,string m){UpdateProgress(m,3+(int)(p*.73));});

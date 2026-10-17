@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "channel": "alpha",
+  "name": "Portloria & Co.",
+  "downloadUrl": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.0-alpha/portloria-win64-v0.1.0.zip",
+  "sha256": "3e4f1e19450b7f222fb4229f03c0ebe7663c4f47d532d16eac9595fa3c98d2a2",
+  "sizeBytes": 1880047236,
+  "publishedAt": "2026-10-17T00:00:00Z",
+  "notes": "Erster oeffentlicher Alpha-Testbuild. Epic-Login, EOS-Lobbys, Windows 10/11."
+}
