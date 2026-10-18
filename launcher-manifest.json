@@ -3,10 +3,10 @@
   "itemType": "game",
   "platform": "desktop",
   "name": "PORTLORIA & CO.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Errichte dein eigenes Unternehmen in einer gemeinsamen Hafenstadt. Fruehe Multiplayer-Alpha mit bis zu vier Teams und Epic Online Services.",
   "developer": "Lumorix",
-  "releaseDate": "2026-10-17",
+  "releaseDate": "2026-10-18",
   "categories": [
     "Simulation",
     "Multiplayer",
@@ -39,7 +39,7 @@
     "Windows/RetailGame/Content/Paks/RetailGame-Windows.ucas",
     "Windows/RetailGame/Content/Paks/RetailGame-Windows.utoc"
   ],
-  "installSizeBytes": 2572094529,
+  "installSizeBytes": 2186111517,
   "defaultInstallFolder": "PORTLORIA & CO.",
   "distribution": {
     "channel": "direct",
@@ -60,11 +60,20 @@
   },
   "download": {
     "kind": "httpArchive",
-    "url": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.0-alpha/portloria-win64-v0.1.0.zip",
-    "sha256": "3e4f1e19450b7f222fb4229f03c0ebe7663c4f47d532d16eac9595fa3c98d2a2",
-    "sizeBytes": 1880047236
+    "url": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.1-alpha/portloria-win64-v0.1.1.zip",
+    "sha256": "09027a2328f12ccdd190a810f94806aedf23c871fdf6f49e4c68dc90c574b6dc",
+    "sizeBytes": 1875179310
   },
   "changelog": [
+    {
+      "version": "0.1.1",
+      "date": "2026-10-18",
+      "items": [
+        "Menü- und Benutzeroberflächen in Hauptmenü, Spielauswahl, Einstellungen und Pausemenü überarbeitet.",
+        "Multiplayer-Lobby optisch neu strukturiert: Teamflächen, Spielerstatus und Bereitschaft.",
+        "Alpha: vollständiger Mehrspieler-End-to-End-Test über zwei externe Accounts steht noch aus."
+      ]
+    },
     {
       "version": "0.1.0",
       "date": "2026-10-17",

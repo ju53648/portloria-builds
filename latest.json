@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "channel": "alpha",
   "name": "Portloria & Co.",
-  "downloadUrl": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.0-alpha/portloria-win64-v0.1.0.zip",
-  "sha256": "3e4f1e19450b7f222fb4229f03c0ebe7663c4f47d532d16eac9595fa3c98d2a2",
-  "sizeBytes": 1880047236,
-  "publishedAt": "2026-10-17T00:00:00Z",
-  "notes": "Erster oeffentlicher Alpha-Testbuild. Epic-Login, EOS-Lobbys, Windows 10/11."
+  "downloadUrl": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.1-alpha/portloria-win64-v0.1.1.zip",
+  "sha256": "09027a2328f12ccdd190a810f94806aedf23c871fdf6f49e4c68dc90c574b6dc",
+  "sizeBytes": 1875179310,
+  "publishedAt": "2026-10-18T07:09:35.726164Z",
+  "notes": "UI-Redesign: Hauptmenü, Spielauswahl, Lobby, Einstellungen und Pausemenü. Launcher bleibt unverändert."
 }
