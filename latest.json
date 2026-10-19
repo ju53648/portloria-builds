@@ -1,11 +1,11 @@
 {
-  "schema": 1,
-  "version": "0.1.2",
-  "channel": "alpha",
-  "name": "Portloria & Co.",
-  "downloadUrl": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.2-alpha/portloria-win64-v0.1.2.zip",
-  "sha256": "6f9a8a4110938c054344fdd3f18fc2ee21828b4e7974e80f6c1e60e56ff4cce8",
-  "sizeBytes": 1875620412,
-  "publishedAt": "2026-10-19T08:37:45.837689Z",
-  "notes": "Branding-Update: PORTLORIA-Hafenstadtgrafiken, Logo und Windows-/Taskleistenicon. Gameplay unverändert."
+    "schema":  1,
+    "version":  "0.1.3",
+    "channel":  "alpha",
+    "name":  "Portloria \u0026 Co.",
+    "downloadUrl":  "https://github.com/ju53648/portloria-builds/releases/download/v0.1.3-alpha/portloria-win64-v0.1.3.zip",
+    "sha256":  "6acf798d1ecef529f3257520966aac8cb0a875307a326cb2f3189547ae4c3299",
+    "sizeBytes":  1886599163,
+    "publishedAt":  "2026-10-19T22:01:05.4707553Z",
+    "notes":  "Verbesserte Grafik\r\nStadt weiter ausgebaut"
 }
