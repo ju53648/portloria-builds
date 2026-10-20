@@ -1,11 +1,11 @@
 {
-    "schema":  1,
-    "version":  "0.1.3",
-    "channel":  "alpha",
-    "name":  "Portloria \u0026 Co.",
-    "downloadUrl":  "https://github.com/ju53648/portloria-builds/releases/download/v0.1.3-alpha/portloria-win64-v0.1.3.zip",
-    "sha256":  "6acf798d1ecef529f3257520966aac8cb0a875307a326cb2f3189547ae4c3299",
-    "sizeBytes":  1886599163,
-    "publishedAt":  "2026-10-19T22:01:05.4707553Z",
-    "notes":  "Verbesserte Grafik\r\nStadt weiter ausgebaut"
+  "schema": 1,
+  "version": "0.1.4",
+  "channel": "alpha",
+  "name": "Portloria & Co.",
+  "downloadUrl": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.4-alpha/portloria-win64-v0.1.4.zip",
+  "sha256": "880b17a3c7bb7fd227d62b3206588eb24bf145c24106c87a39419e215643e868",
+  "sizeBytes": 1883877803,
+  "publishedAt": "2026-10-20T16:50:23.059489Z",
+  "notes": "Landschaft verbessert.\nHauptmenü optisch überarbeitet.\nSpielauswahl und Multiplayer-Lobby modernisiert.\nLayoutprobleme in der Lobby überarbeitet.\nNeuer Bereich „Aktuelles“ mit Roadmap und GitHub-Changelog.\nTeamfarben werden jetzt auch auf den Namensschildern über den Spielern angezeigt.\nTagesstart und Tagesende können gemeinsam mit der Taste Z abgestimmt werden.\nNach dem Tageswechsel wartet die Uhr auf 07:00 Uhr, bis alle Spieler erneut bereit sind."
 }
