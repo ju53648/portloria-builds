@@ -3,7 +3,7 @@
   "itemType": "game",
   "platform": "desktop",
   "name": "PORTLORIA & CO.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Multiplayer-Unternehmenssimulation in einer Hafenstadt. FrÃ¼he Alpha-Version mit Epic Online Services.",
   "developer": "Lumorix",
   "releaseDate": "2026-10-20",
@@ -39,7 +39,7 @@
     "Windows/RetailGame/Content/Paks/RetailGame-Windows.ucas",
     "Windows/RetailGame/Content/Paks/RetailGame-Windows.utoc"
   ],
-  "installSizeBytes": 2194860728,
+  "installSizeBytes": 2194904306,
   "defaultInstallFolder": "Portloria & Co.",
   "distribution": {
     "channel": "githubRelease",
@@ -60,11 +60,27 @@
   },
   "download": {
     "kind": "httpArchive",
-    "url": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.4-alpha/portloria-win64-v0.1.4.zip",
-    "sha256": "880b17a3c7bb7fd227d62b3206588eb24bf145c24106c87a39419e215643e868",
-    "sizeBytes": 1883877803
+    "url": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.5-alpha/portloria-win64-v0.1.5.zip",
+    "sha256": "fa9ff2fb733ddb07ce050021b723af50b7043c83aae325cb7a7d6e89a5fd6a54",
+    "sizeBytes": 1883901531
   },
   "changelog": [
+    {
+      "version": "0.1.5",
+      "date": "2026-10-20",
+      "items": [
+        "Neues Baumenü mit den Kategorien Laden, Lager und Deko.",
+        "Auswahlleiste mit 3D-Vorschaubildern und Objektwechsel über die Pfeiltasten.",
+        "Transparente blaue Live-Vorschau zeigt das gewählte Objekt vor dem Platzieren.",
+        "Bauobjekte können in 45°-Schritten gedreht, platziert und entfernt werden.",
+        "Vier Platzierungsmodi: 10-cm-Raster, 50-cm-Raster, freie Platzierung und Clip-Modus zum Ausrichten von Regalen.",
+        "Mit TAB die Baukategorie wechseln, mit den Pfeiltasten Objekte auswählen.",
+        "Serverseitige Prüfung von Bauzonen, Gegenstands-Tags und Besitzrechten beim Bauen und Entfernen.",
+        "Neue Steuerungshinweise und Statusmeldungen im bestehenden Spiel-HUD.",
+        "Bauobjekte werden aus dem bestehenden Objektkatalog übernommen.",
+        "Alpha-Hinweis: Das Bausystem wurde noch nicht vollständig im Multiplayer getestet; weitere Bauobjekte folgen."
+      ]
+    },
     {
       "version": "0.1.4",
       "date": "2026-10-20",
@@ -113,5 +129,73 @@
         "Noch nicht vollstÃ¤ndig Ã¼ber zwei InternetanschlÃ¼sse abgenommen."
       ]
     }
-  ]
+  ],
+  "localizations": {
+    "de": {
+      "description": "Errichte dein eigenes Unternehmen in einer gemeinsamen Hafenstadt. Frühe Multiplayer-Alpha mit bis zu vier Teams und Epic Online Services.",
+      "categories": [
+        "Simulation",
+        "Mehrspieler",
+        "Früher Zugang"
+      ],
+      "changelog": {
+        "0.1.5": [
+          "Neues Baumenü mit den Kategorien Laden, Lager und Deko.",
+          "Auswahlleiste mit 3D-Vorschaubildern und Objektwechsel über die Pfeiltasten.",
+          "Transparente blaue Live-Vorschau zeigt das gewählte Objekt vor dem Platzieren.",
+          "Bauobjekte können in 45°-Schritten gedreht, platziert und entfernt werden.",
+          "Vier Platzierungsmodi: 10-cm-Raster, 50-cm-Raster, freie Platzierung und Clip-Modus zum Ausrichten von Regalen.",
+          "Mit TAB die Baukategorie wechseln, mit den Pfeiltasten Objekte auswählen.",
+          "Serverseitige Prüfung von Bauzonen, Gegenstands-Tags und Besitzrechten beim Bauen und Entfernen.",
+          "Neue Steuerungshinweise und Statusmeldungen im bestehenden Spiel-HUD.",
+          "Bauobjekte werden aus dem bestehenden Objektkatalog übernommen.",
+          "Alpha-Hinweis: Das Bausystem wurde noch nicht vollständig im Multiplayer getestet; weitere Bauobjekte folgen."
+        ]
+      }
+    },
+    "en": {
+      "description": "Build your own business in a shared harbor city. Early multiplayer alpha with up to four teams and Epic Online Services.",
+      "categories": [
+        "Simulation",
+        "Multiplayer",
+        "Early Access"
+      ],
+      "changelog": {
+        "0.1.5": [
+          "Added a build menu with Shop, Storage and Decoration categories.",
+          "Added an item bar with 3D thumbnails and arrow-key item selection.",
+          "Added a transparent blue live preview of the selected object before placement.",
+          "Build objects can be rotated in 45° increments, placed and removed.",
+          "Four placement modes: 10 cm grid, 50 cm grid, free placement and shelf-alignment clipping.",
+          "Press TAB to switch categories and use the arrow keys to select objects.",
+          "Server-side checks for build zones, item tags and store ownership when placing and removing objects.",
+          "New control hints and status messages integrated into the existing game HUD.",
+          "Buildable objects are sourced from the existing item catalog.",
+          "Alpha notice: The building system has not yet been fully tested in multiplayer; more objects are planned."
+        ]
+      }
+    },
+    "pl": {
+      "description": "Zbuduj własną firmę we wspólnym mieście portowym. Wczesna alfa gry wieloosobowej z maksymalnie czterema zespołami i Epic Online Services.",
+      "categories": [
+        "Symulacja",
+        "Gra wieloosobowa",
+        "Wczesny dostęp"
+      ],
+      "changelog": {
+        "0.1.5": [
+          "Dodano menu budowania z kategoriami Sklep, Magazyn i Dekoracje.",
+          "Dodano pasek przedmiotów z podglądem 3D i wyborem za pomocą strzałek.",
+          "Dodano przezroczysty niebieski podgląd wybranego obiektu przed ustawieniem.",
+          "Obiekty można obracać co 45°, ustawiać i usuwać.",
+          "Cztery tryby ustawiania: siatka 10 cm, siatka 50 cm, swobodne ustawianie i przyciąganie regałów.",
+          "TAB przełącza kategorie, a strzałki wybierają przedmioty.",
+          "Serwer sprawdza strefy budowy, tagi przedmiotów i własność sklepu podczas ustawiania i usuwania.",
+          "Nowe podpowiedzi sterowania i komunikaty stanu w istniejącym interfejsie gry.",
+          "Obiekty budowlane pochodzą z istniejącego katalogu przedmiotów.",
+          "Uwaga: system budowania nie został jeszcze w pełni przetestowany w trybie wieloosobowym; kolejne obiekty są planowane."
+        ]
+      }
+    }
+  }
 }

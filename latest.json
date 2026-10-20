@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "version": "0.1.4",
+  "version": "0.1.5",
   "channel": "alpha",
   "name": "Portloria & Co.",
-  "downloadUrl": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.4-alpha/portloria-win64-v0.1.4.zip",
-  "sha256": "880b17a3c7bb7fd227d62b3206588eb24bf145c24106c87a39419e215643e868",
-  "sizeBytes": 1883877803,
-  "publishedAt": "2026-10-20T16:50:23.059489Z",
-  "notes": "Landschaft verbessert.\nHauptmenü optisch überarbeitet.\nSpielauswahl und Multiplayer-Lobby modernisiert.\nLayoutprobleme in der Lobby überarbeitet.\nNeuer Bereich „Aktuelles“ mit Roadmap und GitHub-Changelog.\nTeamfarben werden jetzt auch auf den Namensschildern über den Spielern angezeigt.\nTagesstart und Tagesende können gemeinsam mit der Taste Z abgestimmt werden.\nNach dem Tageswechsel wartet die Uhr auf 07:00 Uhr, bis alle Spieler erneut bereit sind."
+  "downloadUrl": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.5-alpha/portloria-win64-v0.1.5.zip",
+  "sha256": "fa9ff2fb733ddb07ce050021b723af50b7043c83aae325cb7a7d6e89a5fd6a54",
+  "sizeBytes": 1883901531,
+  "publishedAt": "2026-10-20T20:53:54.277558Z",
+  "notes": "Neues Baumenü mit den Kategorien Laden, Lager und Deko.\nAuswahlleiste mit 3D-Vorschaubildern und Objektwechsel über die Pfeiltasten.\nTransparente blaue Live-Vorschau zeigt das gewählte Objekt vor dem Platzieren.\nBauobjekte können in 45°-Schritten gedreht, platziert und entfernt werden.\nVier Platzierungsmodi: 10-cm-Raster, 50-cm-Raster, freie Platzierung und Clip-Modus zum Ausrichten von Regalen.\nMit TAB die Baukategorie wechseln, mit den Pfeiltasten Objekte auswählen.\nServerseitige Prüfung von Bauzonen, Gegenstands-Tags und Besitzrechten beim Bauen und Entfernen.\nNeue Steuerungshinweise und Statusmeldungen im bestehenden Spiel-HUD.\nBauobjekte werden aus dem bestehenden Objektkatalog übernommen.\nAlpha-Hinweis: Das Bausystem wurde noch nicht vollständig im Multiplayer getestet; weitere Bauobjekte folgen."
 }
