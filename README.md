@@ -12,15 +12,19 @@ Versionierter, öffentlicher **Testkanal** für Portloria & Co. (Lumorix).
 
 Dies ist **Alpha-Software**, keine fertige öffentliche Spielveröffentlichung. Onlinefunktionen verwenden Epic Online Services; solange die EAS-Anwendung im Entwurfsmodus ist, können separate Testberechtigungen nötig sein. Windows kann bei dem derzeit **nicht digital signierten** Testlauncher eine Warnung anzeigen. Lade ihn nur von diesem Repository herunter.
 
-## Neue Version veröffentlichen
+## Neue Version veröffentlichen – immer mit Delta-Patch
 
-1. Den getesteten Windows-Spielbuild ohne persönliche Spielstände als ZIP packen.
-2. Das ZIP mit einer neuen Versionsnummer `vX.Y.Z-alpha` als GitHub-Release-Asset hochladen.
-3. Nach erfolgreichem Upload den SHA-256-Hash und die tatsächliche Archivgröße berechnen.
-4. In `latest.json` `version`, `downloadUrl`, `sha256` und `sizeBytes` auf die neue Version setzen und committen.
-5. Bereits installierte Testlauncher finden die neue Version beim nächsten Start.
+**Verbindlich:** Jeder weitere PORTLORIA-Spielrelease muss ein geprüftes Delta zur vorherigen öffentlichen Version enthalten. Das vollständige ZIP bleibt ausschließlich für Erstinstallationen, Reparatur und inkompatible alte Installationen verfügbar.
 
-Die erste Version lädt bei jedem Update weiterhin das vollständige Archiv; Delta-Updates sind nicht implementiert.
+1. Einen getesteten Windows-Spielbuild als neue Versions-ZIP paketieren. Die genaue ZIP der letzten öffentlichen Version als Delta-Basis aufbewahren.
+2. Auf dem autorisierten Entwicklungs-PC **Update-Planen.cmd** unter `E:\Lumorix\Projects\portloria-distribution` verwenden. Nicht nur das ZIP manuell hochladen.
+3. Der Planer erzeugt mit **BuildPortloriaDelta.py** automatisch einen verschiebungsunabhängigen Bytebereichs-Patch (auch für Unreal-IoStore-Dateien), führt mit **VerifyPortloriaDelta.py** eine vollständige Byte-für-Byte-Prüfung durch und blockiert ungeprüfte Veröffentlichungen.
+4. Der Publisher legt erst das vollständige ZIP **und** das Patch-ZIP als Release-Assets ab. Erst dann aktualisiert er gemeinsam `manifest.json`, `launcher-manifest.json` und `latest.json`.
+5. Launcher mit passender, funktionsfähiger Basisversion wählen automatisch das kleinste valide direkte Delta anhand von `patches[]`. Der vollständige Download bleibt aus Sicherheitsgründen als Fallback erhalten. Reparaturen laden gegebenenfalls weiterhin das volle Paket.
+
+Wenn der notwendige Patch fehlt oder nicht kleiner bzw. nicht verifizierbar ist, darf die Veröffentlichung nicht unbemerkt stattfinden. Eine Vollversion ohne Patch erfordert eine begründete, protokollierte Notfall-Ausnahme. Ein Versionswechsel allein darf keinen pauschalen Voll-Download erzwingen.
+
+Technische Regel: `E:\Lumorix\Projects\portloria-distribution\DELTA-RELEASE-POLICY.md`.
 
 ## Sicherheitsmodell
 

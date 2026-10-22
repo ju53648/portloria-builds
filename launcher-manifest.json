@@ -237,5 +237,13 @@
         ]
       }
     }
-  }
+  },
+  "patches": [
+    {
+      "fromVersion": "0.1.5",
+      "url": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.6-alpha/portloria-delta-v0.1.5-to-v0.1.6.zip",
+      "sha256": "549c6b3f8e64e65220e5bc2002fda2071d171dd8249e9e6e7a0c90d9bd7ccb68",
+      "sizeBytes": 187420796
+    }
+  ]
 }
