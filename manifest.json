@@ -3,10 +3,10 @@
   "itemType": "game",
   "platform": "desktop",
   "name": "PORTLORIA & CO.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Multiplayer-Unternehmenssimulation in einer Hafenstadt. FrÃ¼he Alpha-Version mit Epic Online Services.",
   "developer": "Lumorix",
-  "releaseDate": "2026-10-20",
+  "releaseDate": "2026-10-22",
   "categories": [
     "Simulation",
     "Multiplayer",
@@ -39,7 +39,7 @@
     "Windows/RetailGame/Content/Paks/RetailGame-Windows.ucas",
     "Windows/RetailGame/Content/Paks/RetailGame-Windows.utoc"
   ],
-  "installSizeBytes": 2194904306,
+  "installSizeBytes": 2229686302,
   "defaultInstallFolder": "Portloria & Co.",
   "distribution": {
     "channel": "githubRelease",
@@ -60,11 +60,24 @@
   },
   "download": {
     "kind": "httpArchive",
-    "url": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.5-alpha/portloria-win64-v0.1.5.zip",
-    "sha256": "fa9ff2fb733ddb07ce050021b723af50b7043c83aae325cb7a7d6e89a5fd6a54",
-    "sizeBytes": 1883901531
+    "url": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.6-alpha/portloria-win64-v0.1.6.zip",
+    "sha256": "f9f4c7ea5044a123a9554155ad371f1d930743083e3cdfacaddcb2d26a98d057",
+    "sizeBytes": 1917886978
   },
   "changelog": [
+    {
+      "version": "0.1.6",
+      "date": "2026-10-22",
+      "items": [
+        "Neue Bauobjekte im Baumenü: Verkaufsregal, Lagerregal, drei Pflanzkübel und drei separat einsetzbare Pflanzen.",
+        "Alte Testwürfel aus der Bauobjekt-Auswahl entfernt; bestehende Projektdateien bleiben erhalten.",
+        "Blaue und rote Platzierungsvorschau mit Statusmeldungen und angepassten Bauzonenprüfungen.",
+        "Pfeiltasten im Baumenü von der Spielerbewegung getrennt; nach dem Schließen gilt wieder die normale Steuerung.",
+        "Regale und Pflanzkübel: störende Rastertexturen durch fein strukturierte PBR-Oberflächen ersetzt.",
+        "Metallrahmen, Regalböden und Pflanzerde besitzen getrennte, abgestimmte Oberflächen.",
+        "Alpha-Hinweis: Noch keine vollständige Multiplayer- und visuelle Gameplay-Abnahme aller Bauobjekte."
+      ]
+    },
     {
       "version": "0.1.5",
       "date": "2026-10-20",
@@ -139,6 +152,15 @@
         "Früher Zugang"
       ],
       "changelog": {
+        "0.1.6": [
+          "Neue Bauobjekte im Baumenü: Verkaufsregal, Lagerregal, drei Pflanzkübel und drei separat einsetzbare Pflanzen.",
+          "Alte Testwürfel aus der Bauobjekt-Auswahl entfernt; bestehende Projektdateien bleiben erhalten.",
+          "Blaue und rote Platzierungsvorschau mit Statusmeldungen und angepassten Bauzonenprüfungen.",
+          "Pfeiltasten im Baumenü von der Spielerbewegung getrennt; nach dem Schließen gilt wieder die normale Steuerung.",
+          "Regale und Pflanzkübel: störende Rastertexturen durch fein strukturierte PBR-Oberflächen ersetzt.",
+          "Metallrahmen, Regalböden und Pflanzerde besitzen getrennte, abgestimmte Oberflächen.",
+          "Alpha-Hinweis: Noch keine vollständige Multiplayer- und visuelle Gameplay-Abnahme aller Bauobjekte."
+        ],
         "0.1.5": [
           "Neues Baumenü mit den Kategorien Laden, Lager und Deko.",
           "Auswahlleiste mit 3D-Vorschaubildern und Objektwechsel über die Pfeiltasten.",
@@ -161,6 +183,15 @@
         "Early Access"
       ],
       "changelog": {
+        "0.1.6": [
+          "New build-menu objects: retail shelf, storage rack, three planters and three independently placeable plants.",
+          "Removed legacy test cubes from the build selection; existing project assets are preserved.",
+          "Blue/red placement preview with status messages and improved build-zone checks.",
+          "Arrow keys in the build menu no longer control player movement; normal movement resumes when closed.",
+          "Replaced visible tiled patterns on shelves and planters with subtle PBR surfaces.",
+          "Distinct material appearances for metal frames, shelf decks and potting soil.",
+          "Alpha note: Full multiplayer and visual gameplay acceptance for all build objects is still pending."
+        ],
         "0.1.5": [
           "Added a build menu with Shop, Storage and Decoration categories.",
           "Added an item bar with 3D thumbnails and arrow-key item selection.",
@@ -183,6 +214,15 @@
         "Wczesny dostęp"
       ],
       "changelog": {
+        "0.1.6": [
+          "Nowe obiekty w menu budowania: regał sklepowy, regał magazynowy, trzy donice i trzy niezależne rośliny.",
+          "Usunięto testowe kostki z wyboru obiektów; istniejące zasoby projektu zachowano.",
+          "Niebieski/czerwony podgląd umieszczania z komunikatami oraz poprawionymi strefami budowy.",
+          "Strzałki w menu budowania nie sterują postacią; po zamknięciu wraca zwykłe sterowanie.",
+          "Usunięto widoczny wzór kratki z tekstur regałów i donic; zastosowano subtelne materiały PBR.",
+          "Oddzielne powierzchnie metalowych ram, półek i ziemi w donicach.",
+          "Uwaga: pełne testy trybu wieloosobowego oraz wizualne testy wszystkich obiektów nie zostały jeszcze zakończone."
+        ],
         "0.1.5": [
           "Dodano menu budowania z kategoriami Sklep, Magazyn i Dekoracje.",
           "Dodano pasek przedmiotów z podglądem 3D i wyborem za pomocą strzałek.",
