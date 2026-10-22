@@ -1,11 +1,11 @@
 {
-  "schema": 1,
-  "version": "0.1.6",
-  "channel": "alpha",
-  "name": "Portloria & Co.",
-  "downloadUrl": "https://github.com/ju53648/portloria-builds/releases/download/v0.1.6-alpha/portloria-win64-v0.1.6.zip",
-  "sha256": "f9f4c7ea5044a123a9554155ad371f1d930743083e3cdfacaddcb2d26a98d057",
-  "sizeBytes": 1917886978,
-  "publishedAt": "2026-10-22T10:32:39Z",
-  "notes": "Neue Bauobjekte im Baumenü: Verkaufsregal, Lagerregal, drei Pflanzkübel und drei separat einsetzbare Pflanzen.\nAlte Testwürfel aus der Bauobjekt-Auswahl entfernt; bestehende Projektdateien bleiben erhalten.\nBlaue und rote Platzierungsvorschau mit Statusmeldungen und angepassten Bauzonenprüfungen.\nPfeiltasten im Baumenü von der Spielerbewegung getrennt; nach dem Schließen gilt wieder die normale Steuerung.\nRegale und Pflanzkübel: störende Rastertexturen durch fein strukturierte PBR-Oberflächen ersetzt.\nMetallrahmen, Regalböden und Pflanzerde besitzen getrennte, abgestimmte Oberflächen.\nAlpha-Hinweis: Noch keine vollständige Multiplayer- und visuelle Gameplay-Abnahme aller Bauobjekte."
+    "schema":  1,
+    "version":  "0.1.7",
+    "channel":  "alpha",
+    "name":  "Portloria \u0026 Co.",
+    "downloadUrl":  "https://github.com/ju53648/portloria-builds/releases/download/v0.1.7-alpha/portloria-win64-v0.1.7.zip",
+    "sha256":  "e962f227ab69da1e3b611958a1ae6c7719295245a142b6e5d3cfd82e4a09b248",
+    "sizeBytes":  1978166143,
+    "publishedAt":  "2026-10-22T18:03:42.0145314Z",
+    "notes":  "# PORTLORIA \u0026 CO. â€“ Alpha v0.1.7\n**BUILD YOUR BUSINESS. TOGETHER.** Â· Lumorix Â· 22.10.2026\n\n## Verbesserungen\n- Optimierter, frisch gebauter Windows-Shipping-Build (UE 5.8), kein wiederverwendetes ZIP.\n- Optimierte Normal-Map-AuflÃ¶sungen fÃ¼r 24 StraÃŸen-, Stadtobjekt- und Fahrzeugtexturen zur Senkung der DownloadgrÃ¶ÃŸe. Originaldateien wurden vor den Ã„nderungen gesichert, Modelle und Materialien blieben erhalten.\n- Dynamisch geladene NPC- und Traffic-Blueprints werden nun beim Packaging explizit berÃ¼cksichtigt. Die FuÃŸgÃ¤ngerrouten in der Hafenstadt erzeugen wieder NPCs im Headless-Lauf.\n- Verbesserte Tastaturfokussierung beim HauptmenÃ¼ und bei RÃ¼ckkehr aus dem Updates-Bildschirm.\n- Neuere gespeicherte Spielinhalte und BaumenÃ¼-Assets aus dem aktuellen Unreal-Projekt Ã¼bernommen.\n\n## Getestet\n- Win64 Shipping und Editor kompilieren; frischer vollstÃ¤ndiger Cook.\n- Vollarchiv: CRC/ZIP-Test und SHA-256-PrÃ¼fung, benÃ¶tigte Windows-EXEs und IoStore-Dateien vorhanden.\n- 11 automatisierte Tests (Bausystem, Zeit, Speichern, Lobbyregeln und NPC) erfolgreich.\n- Headless-HauptmenÃ¼ und Hafenstadt starten ohne Fatal Errors; 2 FuÃŸgÃ¤ngerrouten/4 Spawns verifiziert.\n- Zwei lokale Instanzen mit direkter LAN-Verbindung: Host und Client, Join bestÃ¤tigt.\n- Delta von 0.1.6 zu 0.1.7 durch vollstÃ¤ndige bytegenaue Rekonstruktion und Hash-PrÃ¼fung validiert.\n- Keine stabile Vollversion; weiterhin Alpha.\n\n## Bekannte EinschrÃ¤nkungen\n- Einzelne FuÃŸgÃ¤nger-Spawns kÃ¶nnen wegen Kollision blockiert werden; die betroffenen Stellen mÃ¼ssen in der Karte visuell nachjustiert werden.\n- Der Headless-Netzwerktest meldete einen WaterBrushManager-Referenzhinweis. Die visuelle Darstellung der Wassersysteme benÃ¶tigt weitere PrÃ¼fung.\n- Ein PauseMenu-Blueprint meldet weiterhin eine Compilerwarnung zu einem nicht gesetzten EventReply-RÃ¼ckgabewert.\n- Visuelle GUI-Abnahme, ein Online-EOS-Test mit zwei unterschiedlichen Konten und ein vollstÃ¤ndiger GUI-Test der Launcher-Updateauswahl sind noch nicht durchgefÃ¼hrt. Der LAN-Test ersetzt diese nicht.\n\n## Update\nBestandsinstallationen der exakt passenden Version **0.1.6** erhalten den verifizierten direkten Delta-Patch. Alle anderen InstallationsstÃ¤nde kÃ¶nnen die vollstÃ¤ndige Datei zur Neuinstallation oder Reparatur verwenden.\n"
 }
