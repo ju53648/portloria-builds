@@ -68,29 +68,11 @@
       "version": "0.1.7",
       "date": "2026-10-22",
       "items": [
-        "# PORTLORIA & CO. â€“ Alpha v0.1.7",
-        "**BUILD YOUR BUSINESS. TOGETHER.** Â· Lumorix Â· 22.10.2026",
-        "## Verbesserungen",
-        "Optimierter, frisch gebauter Windows-Shipping-Build (UE 5.8), kein wiederverwendetes ZIP.",
-        "Optimierte Normal-Map-AuflÃ¶sungen fÃ¼r 24 StraÃŸen-, Stadtobjekt- und Fahrzeugtexturen zur Senkung der DownloadgrÃ¶ÃŸe. Originaldateien wurden vor den Ã„nderungen gesichert, Modelle und Materialien blieben erhalten.",
-        "Dynamisch geladene NPC- und Traffic-Blueprints werden nun beim Packaging explizit berÃ¼cksichtigt. Die FuÃŸgÃ¤ngerrouten in der Hafenstadt erzeugen wieder NPCs im Headless-Lauf.",
-        "Verbesserte Tastaturfokussierung beim HauptmenÃ¼ und bei RÃ¼ckkehr aus dem Updates-Bildschirm.",
-        "Neuere gespeicherte Spielinhalte und BaumenÃ¼-Assets aus dem aktuellen Unreal-Projekt Ã¼bernommen.",
-        "## Getestet",
-        "Win64 Shipping und Editor kompilieren; frischer vollstÃ¤ndiger Cook.",
-        "Vollarchiv: CRC/ZIP-Test und SHA-256-PrÃ¼fung, benÃ¶tigte Windows-EXEs und IoStore-Dateien vorhanden.",
-        "11 automatisierte Tests (Bausystem, Zeit, Speichern, Lobbyregeln und NPC) erfolgreich.",
-        "Headless-HauptmenÃ¼ und Hafenstadt starten ohne Fatal Errors; 2 FuÃŸgÃ¤ngerrouten/4 Spawns verifiziert.",
-        "Zwei lokale Instanzen mit direkter LAN-Verbindung: Host und Client, Join bestÃ¤tigt.",
-        "Delta von 0.1.6 zu 0.1.7 durch vollstÃ¤ndige bytegenaue Rekonstruktion und Hash-PrÃ¼fung validiert.",
-        "Keine stabile Vollversion; weiterhin Alpha.",
-        "## Bekannte EinschrÃ¤nkungen",
-        "Einzelne FuÃŸgÃ¤nger-Spawns kÃ¶nnen wegen Kollision blockiert werden; die betroffenen Stellen mÃ¼ssen in der Karte visuell nachjustiert werden.",
-        "Der Headless-Netzwerktest meldete einen WaterBrushManager-Referenzhinweis. Die visuelle Darstellung der Wassersysteme benÃ¶tigt weitere PrÃ¼fung.",
-        "Ein PauseMenu-Blueprint meldet weiterhin eine Compilerwarnung zu einem nicht gesetzten EventReply-RÃ¼ckgabewert.",
-        "Visuelle GUI-Abnahme, ein Online-EOS-Test mit zwei unterschiedlichen Konten und ein vollstÃ¤ndiger GUI-Test der Launcher-Updateauswahl sind noch nicht durchgefÃ¼hrt. Der LAN-Test ersetzt diese nicht.",
-        "## Update",
-        "Bestandsinstallationen der exakt passenden Version **0.1.6** erhalten den verifizierten direkten Delta-Patch. Alle anderen InstallationsstÃ¤nde kÃ¶nnen die vollstÃ¤ndige Datei zur Neuinstallation oder Reparatur verwenden."
+        "The harbor feels more alive: Pedestrians are appearing on the city's walking routes again.",
+        "Smoother menus: Keyboard navigation is more reliable in the main menu and when returning from the Updates screen.",
+        "A smaller download: Optimized road, city and vehicle textures reduce the size of the game files.",
+        "Updated building content: Newer building objects and game content are now included.",
+        "Still in alpha: We're continuing to improve some pedestrian spawn points and water visuals."
       ]
     },
     {
@@ -202,29 +184,11 @@
           "Alpha-Hinweis: Das Bausystem wurde noch nicht vollstÃ¤ndig im Multiplayer getestet; weitere Bauobjekte folgen."
         ],
         "0.1.7": [
-          "PORTLORIA & CO. — Alpha v0.1.7",
-          "BUILD YOUR BUSINESS. TOGETHER. · Lumorix · 22.10.2026",
-          "Verbesserungen",
-          "Optimierter, frisch gebauter Windows-Shipping-Build (Unreal Engine 5.8); kein wiederverwendetes ZIP.",
-          "Normal-Map-Auflösungen für 24 Straßen-, Stadtobjekt- und Fahrzeugtexturen optimiert, um die Downloadgröße zu senken. Originaltexturen wurden gesichert; Modelle und Materialien blieben erhalten.",
-          "Dynamisch geladene NPC- und Traffic-Blueprints werden beim Packaging jetzt ausdrücklich berücksichtigt. Die Fußgängerrouten in der Hafenstadt erzeugen im Headless-Lauf wieder NPCs.",
-          "Tastaturfokus im Hauptmenü und bei der Rückkehr aus dem Updates-Bildschirm verbessert.",
-          "Neuere gespeicherte Spielinhalte und Bauobjekt-Assets aus dem aktuellen Unreal-Projekt übernommen.",
-          "Getestet",
-          "Win64 Shipping und Editor kompilieren; vollständiger neuer Cook erfolgreich.",
-          "Vollarchiv mit CRC/ZIP-Test und SHA-256-Prüfung validiert; benötigte Windows-EXEs und IoStore-Dateien vorhanden.",
-          "Alle 11 automatisierten Tests zu Bausystem, Zeit, Speichern, Lobbyregeln und NPCs erfolgreich.",
-          "Headless-Start von Hauptmenü und Hafenstadt ohne schwerwiegende Fehler; zwei Fußgängerrouten und vier Spawns verifiziert.",
-          "Zwei lokale Instanzen direkt über LAN verbunden; Host, Client und Beitritt bestätigt.",
-          "Delta-Patch von 0.1.6 auf 0.1.7 durch bytegenaue Rekonstruktion und Hash-Prüfung validiert.",
-          "Weiterhin eine Alpha-Version und keine stabile Vollversion.",
-          "Bekannte Einschränkungen",
-          "Einige Fußgänger-Spawns können durch Kollisionen blockiert werden; die betroffenen Stellen müssen in der Karte visuell nachjustiert werden.",
-          "Der Headless-Netzwerktest meldete einen WaterBrushManager-Referenzhinweis. Die Darstellung der Wassersysteme muss weiter geprüft werden.",
-          "Ein PauseMenu-Blueprint meldet weiterhin eine Compilerwarnung wegen eines nicht gesetzten EventReply-Rückgabewerts.",
-          "Visuelle GUI-Abnahme, ein Online-EOS-Test mit zwei unterschiedlichen Konten und ein vollständiger GUI-Test der Launcher-Updateauswahl stehen noch aus. Der LAN-Test ersetzt sie nicht.",
-          "Update",
-          "Installationen mit exakt Version 0.1.6 können den verifizierten direkten Delta-Patch verwenden. Andere Versionsstände können das vollständige Archiv zur Neuinstallation oder Reparatur nutzen."
+          "Mehr Leben in der Hafenstadt: Fußgänger erscheinen wieder auf den vorgesehenen Wegen.",
+          "Flüssigere Menüs: Die Tastatursteuerung funktioniert im Hauptmenü und nach dem Update-Bildschirm zuverlässiger.",
+          "Kompakterer Download: Optimierte Straßen-, Stadt- und Fahrzeugtexturen verringern die Dateigröße.",
+          "Aktualisierte Bauinhalte: Neuere Bauobjekte und Spielinhalte sind jetzt enthalten.",
+          "Weiterhin Alpha: An einzelnen Fußgängerpositionen und der Wasserdarstellung wird noch gearbeitet."
         ]
       }
     },
@@ -258,29 +222,11 @@
           "Alpha notice: The building system has not yet been fully tested in multiplayer; more objects are planned."
         ],
         "0.1.7": [
-          "PORTLORIA & CO. — Alpha v0.1.7",
-          "BUILD YOUR BUSINESS. TOGETHER. · Lumorix · October 22, 2026",
-          "Improvements",
-          "Freshly built, optimized Windows Shipping build (Unreal Engine 5.8); no previously packaged ZIP was reused.",
-          "Optimized normal-map resolutions for 24 road, city prop and vehicle textures to reduce download size. Original textures were backed up; models and materials were preserved.",
-          "Dynamically loaded NPC and traffic Blueprints are now explicitly included in packaging. Pedestrian routes in the harbor city spawn NPCs again during headless runs.",
-          "Improved keyboard focus in the main menu and when returning from the Updates screen.",
-          "Incorporated recent saved-game content and building assets from the current Unreal project.",
-          "Testing",
-          "Win64 Shipping and Editor builds compile successfully; a fresh full cook was completed.",
-          "Verified full ZIP archive integrity with CRC and SHA-256 checks; required Windows executables and IoStore files are present.",
-          "All 11 automated tests passed, covering building, time, saving, lobby rules and NPCs.",
-          "Headless main-menu and harbor-city launches completed without fatal errors; two pedestrian routes and four spawns verified.",
-          "Two local instances connected directly over LAN; host, client and joining confirmed.",
-          "The 0.1.6 → 0.1.7 delta patch passed byte-for-byte reconstruction and hash validation.",
-          "This is still an alpha release, not a stable final version.",
-          "Known limitations",
-          "Some pedestrian spawns may be blocked by collisions; affected locations need visual adjustment in the map.",
-          "The headless network test reported a WaterBrushManager reference warning. Water-system visuals require further verification.",
-          "A PauseMenu Blueprint still reports a compiler warning about an unset EventReply return value.",
-          "Visual GUI acceptance, an online EOS test using two distinct accounts and a full GUI test of Launcher update selection are still pending. The LAN test does not replace them.",
-          "Update",
-          "Existing installations running exactly version 0.1.6 can use the verified direct delta patch. Other versions can use the complete archive for a fresh install or repair."
+          "The harbor feels more alive: Pedestrians are appearing on the city's walking routes again.",
+          "Smoother menus: Keyboard navigation is more reliable in the main menu and when returning from the Updates screen.",
+          "A smaller download: Optimized road, city and vehicle textures reduce the size of the game files.",
+          "Updated building content: Newer building objects and game content are now included.",
+          "Still in alpha: We're continuing to improve some pedestrian spawn points and water visuals."
         ]
       }
     },
@@ -314,29 +260,11 @@
           "Uwaga: system budowania nie zostaÅ‚ jeszcze w peÅ‚ni przetestowany w trybie wieloosobowym; kolejne obiekty sÄ… planowane."
         ],
         "0.1.7": [
-          "PORTLORIA & CO. — Alfa v0.1.7",
-          "BUILD YOUR BUSINESS. TOGETHER. · Lumorix · 22.10.2026",
-          "Ulepszenia",
-          "Zoptymalizowana, świeżo zbudowana wersja Windows Shipping (Unreal Engine 5.8); nie wykorzystano ponownie wcześniejszego archiwum ZIP.",
-          "Zoptymalizowano rozdzielczości map normalnych 24 tekstur dróg, elementów miasta i pojazdów, aby zmniejszyć rozmiar pobierania. Oryginały zabezpieczono, a modele i materiały zachowano.",
-          "Dynamicznie ładowane Blueprinty postaci NPC i ruchu ulicznego są teraz jawnie uwzględniane podczas pakowania. Trasy pieszych w mieście portowym ponownie tworzą NPC w testach bez interfejsu.",
-          "Poprawiono obsługę fokusu klawiatury w menu głównym i po powrocie z ekranu aktualizacji.",
-          "Dodano nowszą zapisaną zawartość gry i obiekty budowlane z aktualnego projektu Unreal.",
-          "Testy",
-          "Kompletnie skompilowano wersje Win64 Shipping i Editor oraz wykonano nowy pełny proces przygotowania zasobów.",
-          "Zweryfikowano pełne archiwum ZIP przy użyciu CRC i SHA-256; niezbędne pliki EXE i IoStore są obecne.",
-          "Pomyślnie zakończono 11 testów automatycznych obejmujących budowanie, czas, zapis, zasady lobby i NPC.",
-          "Menu główne i miasto portowe uruchamiają się bez krytycznych błędów w trybie bez interfejsu; sprawdzono dwie trasy pieszych i cztery punkty pojawiania się postaci.",
-          "Dwie lokalne instancje połączyły się bezpośrednio przez LAN; potwierdzono hosta, klienta i dołączenie.",
-          "Sprawdzono aktualizację różnicową 0.1.6 → 0.1.7 przez dokładną rekonstrukcję bajtów i kontrolę sumy.",
-          "To nadal wersja alfa, a nie stabilne wydanie.",
-          "Znane ograniczenia",
-          "Niektóre punkty pojawiania się pieszych mogą być blokowane przez kolizje; wymagają wizualnej korekty na mapie.",
-          "Test sieciowy bez interfejsu zgłosił ostrzeżenie o referencji WaterBrushManager. Wygląd systemów wodnych wymaga dalszej weryfikacji.",
-          "Blueprint PauseMenu nadal zgłasza ostrzeżenie kompilatora dotyczące nieustawionej wartości zwracanej EventReply.",
-          "Nadal oczekują: wizualny test interfejsu, internetowy test EOS z dwoma różnymi kontami oraz pełny test wyboru aktualizacji w Launcherze. Test LAN ich nie zastępuje.",
-          "Aktualizacja",
-          "Istniejące instalacje dokładnie w wersji 0.1.6 mogą użyć sprawdzonej aktualizacji różnicowej. Pozostałe wersje mogą użyć pełnego archiwum do nowej instalacji lub naprawy."
+          "Więcej życia w mieście portowym: Piesi ponownie pojawiają się na wyznaczonych trasach.",
+          "Płynniejsza obsługa menu: Nawigacja klawiaturą działa pewniej w menu głównym i po powrocie z ekranu aktualizacji.",
+          "Mniejsze pobieranie: Zoptymalizowane tekstury dróg, miasta i pojazdów zmniejszają rozmiar plików gry.",
+          "Zaktualizowane elementy budowlane: Dodano nowsze obiekty i zawartość gry.",
+          "Wciąż wersja alfa: Nadal pracujemy nad niektórymi miejscami pojawiania się pieszych i wyglądem wody."
         ]
       }
     }
